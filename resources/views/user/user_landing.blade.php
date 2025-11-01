@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4notes - Note Taking Reimagined</title>
+    @vite(['resources/css/user_landing.css', 'resources/js/user_landing.js'])
+</head>
+<body>
+    <div class="ambient-shape shape-1"></div>
+    <div class="ambient-shape shape-2"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a class="navbar-brand" href="#">4notes</a>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="{{ route('user.user_register') }}">Register</a></li>
+                    <li><a class="nav-link" href="{{ route('user.user_login')}}">Sign In</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Think clearly, <span class="highlight">write freely</span></h1>
+                    <p>A minimal space for your thoughts. No clutter, no distractions. Just you and your ideas flowing naturally.</p>
+                    <div class="cta-buttons">
+                        <button class="btn-primary-custom" onclick="window.location.href='{{ route('user.user_register') }}'">Start Writing</button>                        
+                        <button class="btn-secondary-custom" onclick="window.location.href='#features'">Explore</button>
+                    </div>
+                </div>
+                
+                <div class="visual-section">
+                    <div class="note-canvas canvas-1">
+                        <div class="note-header"><span class="note-dot dot-orange"></span>Ideas</div>
+                        <div class="note-title">Weekend Project</div>
+                        <div class="note-text">Build something meaningful. Small steps lead to big changes.</div>
+                        <div class="note-line"></div>
+                        <div class="note-text" style="font-size: 0.8rem; opacity: 0.6;">2 hours ago</div>
+                    </div>
+
+                    <div class="note-canvas canvas-2">
+                        <div class="note-header"><span class="note-dot dot-blue"></span>Work</div>
+                        <div class="note-title">Team Sync</div>
+                        <div class="note-text">Review design mockups<br>Discuss API architecture<br>Plan sprint goals</div>
+                    </div>
+
+                    <div class="note-canvas canvas-3">
+                        <div class="note-header"><span class="note-dot dot-green"></span>Personal</div>
+                        <div class="note-title">Morning Thoughts</div>
+                        <div class="note-text">The quietest moments often hold the loudest truths. Remember to pause.</div>
+                    </div>
+
+                    <div class="note-canvas canvas-4">
+                        <div class="note-header"><span class="note-dot dot-pink"></span>Goals</div>
+                        <div class="note-title">This Month</div>
+                        <div class="note-text">Read 2 books<br>Launch side project<br>Morning runs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-minimal" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-title">Distraction-free writing</div>
+                    <div class="feature-description">A clean canvas that adapts to your flow. Write without friction, organize without thinking.</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-title">Always accessible</div>
+                    <div class="feature-description">Access your notes from anywhere. Write on your computer, check on your phone, seamless sync across all devices.</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-title">Private by design</div>
+                    <div class="feature-description">Your thoughts belong to you. We encrypt everything and never peek at your notes.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Finally, a note app that doesn't get in my way. Just open and write.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #ffb380, #ff8c5a);"></div>
+                        <div>
+                            <div class="author-name">Calvin Klein</div>
+                            <div class="author-role">Product Designer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">I've tried dozens of note apps. This is the one that stuck.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #80c5dd, #5da8c4);"></div>
+                        <div>
+                            <div class="author-name">William Shakespeare</div>
+                            <div class="author-role">Writer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Clean, simple, beautiful. Everything a notes app should be.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #a8d5a8, #7ec47e);"></div>
+                        <div>
+                            <div class="author-name">Steve Jobs</div>
+                            <div class="author-role">Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Start writing today</h2>
+                <p class="cta-subtitle">Join thousands who've found their perfect note-taking space</p>
+                <button class="btn-primary-custom btn-large" onclick="window.location.href='{{ route('user.user_register') }}'">Get Started Free</button>
+                <p class="cta-note">No credit card required • Free forever</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">4notes</div>
+                    <p class="footer-tagline">Your thoughts, beautifully organized</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Sing Up</a>
+                        <a href="#">Updates</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Security</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 4notes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

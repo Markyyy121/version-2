@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - 4notes</title>
+    @vite('resources/css/index.css')
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape-blob blob-1"></div>
+        <div class="shape-blob blob-2"></div>
+        <div class="shape-blob blob-3"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24" fill="white">
+                    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                    <path d="M8 15h8v2H8v-2zm0-4h8v2H8v-2zm0-4h5v2H8V7z"/>
+                </svg>
+            </div>
+            4notes
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Welcome to 4notes</h1>
+                <p class="welcome-subtitle">Choose your access level to continue</p>
+            </div>
+
+            <div class="cards-container">
+                <!-- User Card -->
+                <a href="{{ route('user.user_landing') }}" class="role-card user-card">
+                    <div class="role-icon-wrapper">
+                        <div class="role-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 class="role-title">User Access</h2>
+                    <p class="role-description">
+                        Start writing and organizing your thoughts in a beautiful, distraction-free environment
+                    </p>
+                    <ul class="role-features">
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Create and manage your notes</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Sync across all devices</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Organize with tags and folders</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>End-to-end encryption</span>
+                        </li>
+                    </ul>
+                    <div class="role-badge">
+                        Continue as User
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Admin Card -->
+                <a href="{{ route('admin.admin_login') }}" class="role-card admin-card">
+                    <div class="role-icon-wrapper">
+                        <div class="role-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 class="role-title">Admin Access</h2>
+                    <p class="role-description">
+                        Full system control and management capabilities for authorized administrators
+                    </p>
+                    <ul class="role-features">
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>User management and permissions</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>System configuration and settings</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Analytics and reporting tools</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span>Security and audit logs</span>
+                        </li>
+                    </ul>
+                    <div class="role-badge">
+                        Admin Login
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">
+            Need help? <a href="#" class="footer-link">Contact Support</a>
+        </p>
+    </footer>
+</body>
+</html>
